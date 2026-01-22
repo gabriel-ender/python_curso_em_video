@@ -8,8 +8,12 @@ for c in range(0, 5):
     if c == 0 or n > lista1[-1]:
         lista1.append(n)
         print("Valor adicionado ao FINAL da lista!")
-    if n < lista1[0]:
-        lista1.insert(0, n)
-        print("Valor adicionado no INÍCIO da lista!")
-    if
+    else:
+        pos = 0
+        while pos < len(lista1):
+            if n <= lista1[pos]:
+                lista1.insert(pos, n)
+                print(f"Valor adicionado na posição {pos} da lista!")
+                break
+            pos += 1
 print(f"Os números adicionados foram: {lista1}")
